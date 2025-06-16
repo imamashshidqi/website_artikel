@@ -28,11 +28,13 @@ $no = 1;
             <tr>
                 <th scope="row"><?= $row['id'] ?></th>
                 <td><?= $row['username'] ?></td>
-                <td><a href="updateAdminDashboard.php?id=<?= $row['id'] ?>"><i class="bi bi-pencil-fill me-2"></i></a></td>
+                <td><a href="updateAdminDashboard.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning"><i class="bi bi-pencil-fill"></i></a></td>
                 <td>
                     <form action="database/hapusAdmin.php" method="POST" class="d-inline">
                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
-                        <button><i class="bi bi-trash-fill text-danger"></i></button>
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            <i class="bi bi-trash-fill"></i>
+                        </button>
                     </form>
                 </td>
             </tr>
